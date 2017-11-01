@@ -1,4 +1,6 @@
-open abstract class GLinkedList {
+package linklist
+
+abstract class GLinkedList {
 
    private var headNode: Node? = null
         get() = headNode()
@@ -59,7 +61,7 @@ open class LIFOLinkedList : GLinkedList(){
     }
 
 
-    override fun insertItem(item: Any): Unit {
+    override fun insertItem(item: Any) {
         headNode = Node(item, headNode)
     }
 
@@ -71,7 +73,7 @@ open class LIFOLinkedList : GLinkedList(){
 
 open class FIFOLinkedList : GLinkedList(){
 
-    var headNode :Node? =null
+    var headNode : Node? =null
 
     override fun headNode(): Node? {
         return headNode
@@ -80,7 +82,7 @@ open class FIFOLinkedList : GLinkedList(){
     var lastNode: Node? = null
 
     override fun insertItem(item: Any) {
-        val node = Node(item,null)
+        val node = Node(item, null)
 
         if(lastNode !=null) {
             lastNode?.nextNode=node
@@ -97,6 +99,8 @@ open class FIFOLinkedList : GLinkedList(){
     }
 
 }
+
+
 
 
 data class Node(var value: Any, var nextNode: Node?)

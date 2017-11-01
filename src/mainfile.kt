@@ -1,8 +1,39 @@
+import linklist.DoublyLinkedList
+import linklist.FIFOLinkedList
+import linklist.LIFOLinkedList
+
 fun main(args: Array<String>) {
+
+    testdoublylist()
+
+   // testlist()
+
+}
+
+fun testdoublylist() {
+
+    val doublelist= DoublyLinkedList()
+
+    doublelist.insertItem(5)
+    doublelist.insertItem(6)
+    doublelist.insertItem("Gurtek")
+    doublelist.insertItem("Single")
+
+    doublelist.deleteItem(6)
+
+
+    doublelist.printList()
+
+
+
+}
+
+
+fun testlist(){
 
     val linkedList = FIFOLinkedList()
 
-    val lifolist =LIFOLinkedList()
+    val lifolist = LIFOLinkedList()
 
     linkedList.insertItem(5)
     linkedList.insertItem(6)
@@ -13,7 +44,7 @@ fun main(args: Array<String>) {
     linkedList.insertItem("Wow you did it!")
     linkedList.insertItem("Nice to see you buddy!")
 
-    //linkedList.deleteItem(6)
+    linkedList.deleteItem(6)
     //linkedList.deleteItem(8)
 
     lifolist.insertItem(5)
@@ -25,7 +56,7 @@ fun main(args: Array<String>) {
     lifolist.insertItem("Wow you did it!")
     lifolist.insertItem("Nice to see you buddy!")
 
-
+    lifolist.deleteItem(8)
 
 
     linkedList.printList()
